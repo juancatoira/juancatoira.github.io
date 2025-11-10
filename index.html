@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Nombre – Desarrollador Backend</title>
+  <meta name="description" content="Currículum online de Tu Nombre, desarrollador backend especializado en Java y Spring Boot.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/732/732212.png">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+  <!-- Contenedor principal -->
+  <main class="max-w-3xl mx-auto p-8">
+
+    <!-- Encabezado -->
+    <header class="text-center mb-10">
+      <img src="https://via.placeholder.com/150" alt="Foto de perfil" class="w-32 h-32 rounded-full mx-auto shadow-md mb-4">
+      <h1 class="text-3xl font-bold mb-2">Tu Nombre</h1>
+      <p class="text-gray-600">Desarrollador Backend • Java • Spring Boot • APIs REST</p>
+    </header>
+
+    <!-- Sobre mí -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300">Sobre mí</h2>
+      <p>Soy un desarrollador backend con experiencia en Java, Spring Boot y diseño de APIs REST. Me apasiona crear soluciones limpias, eficientes y fáciles de mantener. Busco crecer profesionalmente en entornos donde se valore la calidad del código y el trabajo en equipo.</p>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300">Habilidades</h2>
+      <ul class="grid grid-cols-2 gap-2 list-disc list-inside">
+        <li>Java / Spring Boot</li>
+        <li>APIs REST / JSON</li>
+        <li>SQL / PostgreSQL</li>
+        <li>Docker / Git</li>
+        <li>CI/CD</li>
+        <li>Testing / JUnit</li>
+      </ul>
+    </section>
+
+    <!-- Experiencia -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300">Experiencia</h2>
+
+      <div class="mb-4">
+        <p class="font-semibold">Líder Técnico – Proyecto Seguros XYZ <span class="text-gray-500">(2023 – Actualidad)</span></p>
+        <p>Coordinación técnica del equipo, revisión de código y definición de arquitectura backend en Java. Implementación de servicios REST y comunicación asíncrona con sistemas externos.</p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Desarrollador Backend – Compañía ABC <span class="text-gray-500">(2021 – 2023)</span></p>
+        <p>Desarrollo de microservicios con Spring Boot, integración de APIs y optimización de consultas SQL.</p>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section>
+      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300">Contacto</h2>
+      <ul>
+        <li>📧 <a href="mailto:tuemail@ejemplo.com" class="text-blue-600 hover:underline">tuemail@ejemplo.com</a></li>
+        <li>💼 <a href="https://linkedin.com/in/tuperfil" class="text-blue-600 hover:underline">linkedin.com/in/tuperfil</a></li>
+        <li>💻 <a href="https://github.com/tuusuario" class="text-blue-600 hover:underline">github.com/tuusuario</a></li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-center text-gray-500 text-sm">
+      <p>© <span id="year"></span> Tu Nombre. Todos los derechos reservados.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Pone automáticamente el año actual
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
