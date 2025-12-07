@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juan García – Analista y desarrollador Backend</title>
-  <meta name="description" content="Currículum, desarrollador backend">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="letra-j.png">
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
 
-  <!-- Contenedor principal -->
-  <main class="max-w-3xl mx-auto p-8">
+  <meta name="description" content="CV de desarrollador backend especializado en Java y microservicios" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="letra-j.png" />
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed transition-opacity duration-300" id="body">
+
+  <!-- Selector de idioma -->
+  <div class="flex justify-end max-w-3xl mx-auto px-6 pt-6">
+    <div class="flex items-center gap-4 bg-white border rounded-full px-4 py-2 shadow-sm">
+      <span class="text-xs text-gray-500" data-i18n="change_language_hint">
+        Cambiar idioma
+      </span>
+
+      <button onclick="setLanguage('es')" class="flex items-center gap-1 p-1 hover:scale-110 transition">
+        <img src="assets/flags/es.svg" class="w-6 h-6" alt="Español">
+      </button>
+
+      <button onclick="setLanguage('en')" class="flex items-center gap-1 p-1 hover:scale-110 transition">
+        <img src="assets/flags/en.svg" class="w-6 h-6" alt="English">
+      </button>
+    </div>
+  </div>
+
+  <main class="max-w-3xl mx-auto p-8 transition-opacity duration-300" id="main-content">
 
     <!-- Encabezado -->
     <header class="text-center mb-10">
@@ -19,23 +37,18 @@
         <img src="foto_web.jpg" alt="Foto de perfil" class="w-full h-full object-cover object-center">
       </div>
       <h1 class="text-3xl font-bold mb-2">Juan García Catoira</h1>
-      <p class="text-gray-600">Desarrollador • Analista • Gestión</p>
+      <p class="text-gray-600" data-i18n="subtitle"></p>
     </header>
 
     <!-- Sobre mí -->
     <section class="mb-8">
-      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300">Quién soy</h2>
-      <p>
-        Desde pequeño me ha picado la curiosidad por todo lo que tiene botones, cables o pantallas. Por eso mismo decidí estudiar Ingeniería Informática. 
-        Empecé a trabajar pronto y eso me enseñó el valor del esfuerzo y la mejora constante. 
-        Hoy, la tecnología es mi forma de canalizar esa curiosidad: me gusta entender cómo funcionan las cosas, romperlas (a veces) y volver a construirlas mejor.  
-        Cuando no estoy delante del ordenador, suelo estar entrenando o practicando artes marciales —mi otra gran pasión—.
-      </p>
+      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300" data-i18n="about_title"></h2>
+      <p data-i18n="about_text"></p>
     </section>
 
     <!-- Habilidades -->
     <section class="mb-8">
-      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300">Tecnologías que manejo</h2>
+      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300" data-i18n="skills_title"></h2>
       <ul class="grid grid-cols-2 gap-2 list-disc list-inside">
         <li>Java / Python</li>
         <li>Spring / Hibernate</li>
@@ -47,120 +60,116 @@
       </ul>
     </section>
 
+    <!-- Cómo trabajo -->
     <section class="mb-8">
-      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300">Cómo trabajo con la gente</h2>
-      <p>
-         Me gusta trabajar en equipo y creo que las mejores ideas salen cuando todos colaboran. He sido la persona de contacto con el cliente y la cara visible de mi equipo, 
-         lo que me ha ayudado a ganar mucha experiencia en comunicación y gestión. También he hecho entrevistas técnicas a otros desarrolladores y 
-         he participado en la formación de gente recién incorporada, lo que me ha dado una buena perspectiva sobre cómo apoyar y hacer crecer a un equipo.
-      </p>
+      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300" data-i18n="work_style_title"></h2>
+      <p data-i18n="work_style_text"></p>
     </section>
-   <!-- Experiencia -->
-<section class="mb-8">
-  <h2 class="text-xl font-semibold mb-4 border-b pb-1 border-gray-300">Lo que he hecho</h2>
 
-  <div class="space-y-6">
-    
-    <!-- Odeene -->
-    <div class="pb-4 border-b border-gray-200 last:border-0">
-      <div class="flex items-center gap-3 mb-1">
-        <img src="odeene_logo.jpeg" alt="Odeene logo" class="w-6 h-6 object-contain">
-        <p class="font-semibold">
-          Analista – Odeene Ingeniería
-          <span class="text-gray-500 text-sm ml-2">(may. 2020 – Actualidad) · A Coruña / Remoto</span>
-        </p>
+    <!-- Experiencia -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4 border-b pb-1 border-gray-300" data-i18n="experience_title"></h2>
+
+      <div class="space-y-6">
+
+        <!-- Odeene -->
+        <div class="pb-4 border-b border-gray-200 last:border-0">
+          <div class="flex items-center gap-3 mb-1">
+            <img src="odeene_logo.jpeg" class="w-6 h-6 object-contain">
+            <p class="font-semibold">
+              <span data-i18n="odeene_role"></span>
+              <span class="text-gray-500 text-sm ml-2">(may. 2020 – Actualidad) · A Coruña / Remoto</span>
+            </p>
+          </div>
+          <p data-i18n="odeene_desc"></p>
+          <ul class="list-disc list-inside text-gray-700" data-i18n="odeene_tasks"></ul>
+        </div>
+
+        <!-- Vector -->
+        <div class="pb-4 border-b border-gray-200 last:border-0">
+          <div class="flex items-center gap-3 mb-1">
+            <img src="vector_logo.jpeg" class="w-6 h-6 object-contain">
+            <p class="font-semibold">
+              <span data-i18n="vector_role"></span>
+              <span class="text-gray-500 text-sm ml-2">(feb. 2019 – may. 2020)</span>
+            </p>
+          </div>
+          <p data-i18n="vector_desc"></p>
+        </div>
+
+        <!-- Altia -->
+        <div class="pb-4 border-b border-gray-200 last:border-0">
+          <div class="flex items-center gap-3 mb-1">
+            <img src="altia_logo.jpeg" class="w-6 h-6 object-contain">
+            <p class="font-semibold">
+              <span data-i18n="altia_role"></span>
+              <span class="text-gray-500 text-sm ml-2">(jun. 2018 – feb. 2019)</span>
+            </p>
+          </div>
+          <p data-i18n="altia_desc"></p>
+        </div>
+
+        <!-- Marketeer -->
+        <div class="pb-4 border-b border-gray-200 last:border-0">
+          <div class="flex items-center gap-3 mb-1">
+            <img src="marketeer_logo.jpeg" class="w-6 h-6 object-contain">
+            <p class="font-semibold">
+              <span data-i18n="marketeer_role"></span>
+              <span class="text-gray-500 text-sm ml-2">(oct. 2017 – jun. 2018)</span>
+            </p>
+          </div>
+          <p data-i18n="marketeer_desc"></p>
+        </div>
+
       </div>
-      <p>Proyecto en el sector bancario y de seguros.</p>
-      <ul class="list-disc list-inside text-gray-700">
-        <li>Coordinación técnica del equipo, revisión de código y definición de arquitectura backend en Java.</li>
-        <li>Implementación de servicios REST y comunicación con sistemas externos.</li>
-        <li>Gestión de incidencias.</li>
-        <li>Realización de entrevistas técnicas.</li>
-      </ul>
-    </div>
+    </section>
 
-    <!-- Vector -->
-    <div class="pb-4 border-b border-gray-200 last:border-0">
-      <div class="flex items-center gap-3 mb-1">
-        <img src="vector_logo.jpeg" alt="Vector ITC Group logo" class="w-6 h-6 object-contain">
-        <p class="font-semibold">
-          Desarrollador Backend – Vector ITC Group
-          <span class="text-gray-500 text-sm ml-2">(feb. 2019 – may. 2020) · A Coruña</span>
-        </p>
+    <!-- Formación -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4 border-b pb-1 border-gray-300" data-i18n="education_title"></h2>
+
+      <div class="flex items-start gap-3 pb-4">
+        <img src="universidade_da_corua_logo.jpeg" class="w-8 h-8 object-contain mt-1">
+        <div>
+          <p class="font-semibold" data-i18n="degree"></p>
+          <p class="text-gray-600" data-i18n="university"></p>
+          <p data-i18n="education_desc"></p>
+        </div>
       </div>
-      <p>Proyecto de gran relevancia en el sector textil y logístico.</p>
-      <ul class="list-disc list-inside text-gray-700">
-        <li>Desarrollo y mantenimiento de servicios en Java.</li>
-        <li>Optimización de consultas SQL.</li>
-      </ul>
-    </div>
+    </section>
 
-    <!-- Altia -->
-    <div class="pb-4 border-b border-gray-200 last:border-0">
-      <div class="flex items-center gap-3 mb-1">
-        <img src="altia_logo.jpeg" alt="Altia logo" class="w-6 h-6 object-contain">
-        <p class="font-semibold">
-          Desarrollador Backend – Altia S.A.
-          <span class="text-gray-500 text-sm ml-2">(jun. 2018 - feb. 2019) · A Coruña</span>
-        </p>
-      </div>
-      <p>Producto propio - Herramienta de gestión de procesos orientada a la Administración Pública.</p>
-      <ul class="list-disc list-inside text-gray-700">
-        <li>Desarrollo y mantenimiento de servicios web en Java con Apache Struts.</li>
-      </ul>
-    </div>
-
-    <!-- Marketeer -->
-    <div class="pb-4 border-b border-gray-200 last:border-0">
-      <div class="flex items-center gap-3 mb-1">
-        <img src="marketeer_logo.jpeg" alt="Marketeer logo" class="w-6 h-6 object-contain">
-        <p class="font-semibold">
-          Desarrollador Backend – Marketeer
-          <span class="text-gray-500 text-sm ml-2">(oct. 2017 - jun. 2018) · A Coruña</span>
-        </p>
-      </div>
-      <p>Producto propio - Desarrollo de chatbots integrados con Facebook y WhatsApp.</p>
-      <ul class="list-disc list-inside text-gray-700">
-        <li>Desarrollo de microservicios en Python.</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-    
-<!-- Formación -->
-<section class="mb-8">
-  <h2 class="text-xl font-semibold mb-4 border-b pb-1 border-gray-300">Lo que he estudiado</h2>
-
-  <div class="space-y-6">
-    <div class="flex items-start gap-3 pb-4 border-b border-gray-200 last:border-0">
-      <img src="universidade_da_corua_logo.jpeg" alt="logo udc" class="w-8 h-8 object-contain mt-1">
-      <div>
-        <p class="font-semibold">Grado en Ingeniería Informática – Mención en Computación</p>
-        <p class="text-gray-600">Universidade da Coruña</p>
-        <p>Formación orientada a la programación, arquitectura de sistemas, con mención en la rama de computación donde se trabaja con tecnologías relacionadas con la inteligencia artificial y el desarrollo de software.</p>
-      </div>
-    </div>
-  </div>
-</section>
     <!-- Contacto -->
     <section>
-      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300">Contáctame!</h2>
+      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300" data-i18n="contact_title"></h2>
       <ul>
         <li>📧 <a href="mailto:jgarciacatoira@gmail.com" class="text-blue-600 hover:underline">Email</a></li>
-        <li>💼 <a href="https://www.linkedin.com/in/juan-garc%C3%ADa-catoira-772817a2/" class="text-blue-600 hover:underline">Linkedin</a></li>
+        <li>💼 <a href="https://www.linkedin.com/in/juan-garc%C3%ADa-catoira-772817a2/" class="text-blue-600 hover:underline">LinkedIn</a></li>
       </ul>
     </section>
 
-    <!-- Footer -->
     <footer class="mt-12 text-center text-gray-500 text-sm">
-      <p>© <span id="year"></span> Juan García Catoira. Todos los derechos reservados.</p>
+      <p>© <span id="year"></span> Juan García Catoira. <span data-i18n="rights"></span></p>
     </footer>
+
   </main>
 
+  <script src="js/i18n.js"></script>
+
   <script>
-    // Pone automáticamente el año actual
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function animateChange() {
+      const content = document.getElementById("main-content");
+      content.classList.add("opacity-0");
+      setTimeout(() => content.classList.remove("opacity-0"), 200);
+    }
+
+    const originalSetLanguage = window.setLanguage;
+    window.setLanguage = function (lang) {
+      animateChange();
+      originalSetLanguage(lang);
+    };
   </script>
+
 </body>
 </html>
