@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Juan García – Analista y desarrollador Backend</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="CV de desarrollador backend especializado en Java y microservicios" />
+  <title>Juan García – Analista y desarrollador Backend</title>
+  <meta name="description" content="Currículum, desarrollador backend">
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="letra-j.png" />
+  <link rel="icon" href="letra-j.png">
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans leading-relaxed transition-opacity duration-300" id="body">
 
-  <!-- Selector de idioma -->
-  <div class="flex justify-end max-w-3xl mx-auto px-6 pt-6">
-    <div class="flex items-center gap-4 bg-white border rounded-full px-4 py-2 shadow-sm">
-      <span class="text-xs text-gray-500" data-i18n="change_language_hint">
-        Cambiar idioma
-      </span>
+  <!-- 🌍 Selector de idioma -->
+  <div class="flex flex-col items-center mt-6 mb-2">
+    <p class="text-sm text-gray-500 mb-2" data-i18n="change_language_hint">
+      🌍 Cambia el idioma
+    </p>
 
-      <button onclick="setLanguage('es')" class="flex items-center gap-1 p-1 hover:scale-110 transition">
-        <img src="es.svg" class="w-6 h-6" alt="Español">
+    <div class="flex gap-4" id="language-selector">
+
+      <button onclick="setLanguage('es')" class="flex items-center gap-2 px-3 py-2 rounded-full hover:bg-gray-200 transition">
+        <div class="w-8 h-8 rounded-full overflow-hidden border">
+          <img src="assets/flags/es.svg" class="w-full h-full object-cover" alt="Español">
+        </div>
+        <span class="text-sm">ES</span>
       </button>
 
-      <button onclick="setLanguage('en')" class="flex items-center gap-1 p-1 hover:scale-110 transition">
-        <img src="gb.svg" class="w-6 h-6" alt="English">
+      <button onclick="setLanguage('en')" class="flex items-center gap-2 px-3 py-2 rounded-full hover:bg-gray-200 transition">
+        <div class="w-8 h-8 rounded-full overflow-hidden border">
+          <img src="assets/flags/en.svg" class="w-full h-full object-cover" alt="English">
+        </div>
+        <span class="text-sm">EN</span>
       </button>
+
     </div>
   </div>
 
-  <main class="max-w-3xl mx-auto p-8 transition-opacity duration-300" id="main-content">
+  <!-- Contenedor principal -->
+  <main class="max-w-3xl mx-auto p-8">
 
     <!-- Encabezado -->
     <header class="text-center mb-10">
@@ -42,7 +52,7 @@
 
     <!-- Sobre mí -->
     <section class="mb-8">
-      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300" data-i18n="about_title"></h2>
+      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300" data-i18n="about_title"></h2> 
       <p data-i18n="about_text"></p>
     </section>
 
@@ -62,8 +72,8 @@
 
     <!-- Cómo trabajo -->
     <section class="mb-8">
-      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300" data-i18n="work_style_title"></h2>
-      <p data-i18n="work_style_text"></p>
+      <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300" data-i18n="how_i_work_title"></h2>
+      <p data-i18n="how_i_work_text"></p>
     </section>
 
     <!-- Experiencia -->
@@ -71,54 +81,32 @@
       <h2 class="text-xl font-semibold mb-4 border-b pb-1 border-gray-300" data-i18n="experience_title"></h2>
 
       <div class="space-y-6">
-
         <!-- Odeene -->
         <div class="pb-4 border-b border-gray-200 last:border-0">
           <div class="flex items-center gap-3 mb-1">
             <img src="odeene_logo.jpeg" class="w-6 h-6 object-contain">
-            <p class="font-semibold">
-              <span data-i18n="odeene_role"></span>
-              <span class="text-gray-500 text-sm ml-2">(may. 2020 – Actualidad) · A Coruña / Remoto</span>
-            </p>
+            <p class="font-semibold" data-i18n="odeene_title"></p>
           </div>
           <p data-i18n="odeene_desc"></p>
-          <ul class="list-disc list-inside text-gray-700" data-i18n="odeene_tasks"></ul>
+          <ul class="list-disc list-inside text-gray-700">
+            <li data-i18n="odeene_b1"></li>
+            <li data-i18n="odeene_b2"></li>
+            <li data-i18n="odeene_b3"></li>
+            <li data-i18n="odeene_b4"></li>
+          </ul>
         </div>
 
         <!-- Vector -->
         <div class="pb-4 border-b border-gray-200 last:border-0">
           <div class="flex items-center gap-3 mb-1">
             <img src="vector_logo.jpeg" class="w-6 h-6 object-contain">
-            <p class="font-semibold">
-              <span data-i18n="vector_role"></span>
-              <span class="text-gray-500 text-sm ml-2">(feb. 2019 – may. 2020)</span>
-            </p>
+            <p class="font-semibold" data-i18n="vector_title"></p>
           </div>
           <p data-i18n="vector_desc"></p>
-        </div>
-
-        <!-- Altia -->
-        <div class="pb-4 border-b border-gray-200 last:border-0">
-          <div class="flex items-center gap-3 mb-1">
-            <img src="altia_logo.jpeg" class="w-6 h-6 object-contain">
-            <p class="font-semibold">
-              <span data-i18n="altia_role"></span>
-              <span class="text-gray-500 text-sm ml-2">(jun. 2018 – feb. 2019)</span>
-            </p>
-          </div>
-          <p data-i18n="altia_desc"></p>
-        </div>
-
-        <!-- Marketeer -->
-        <div class="pb-4 border-b border-gray-200 last:border-0">
-          <div class="flex items-center gap-3 mb-1">
-            <img src="marketeer_logo.jpeg" class="w-6 h-6 object-contain">
-            <p class="font-semibold">
-              <span data-i18n="marketeer_role"></span>
-              <span class="text-gray-500 text-sm ml-2">(oct. 2017 – jun. 2018)</span>
-            </p>
-          </div>
-          <p data-i18n="marketeer_desc"></p>
+          <ul class="list-disc list-inside text-gray-700">
+            <li data-i18n="vector_b1"></li>
+            <li data-i18n="vector_b2"></li>
+          </ul>
         </div>
 
       </div>
@@ -127,14 +115,8 @@
     <!-- Formación -->
     <section class="mb-8">
       <h2 class="text-xl font-semibold mb-4 border-b pb-1 border-gray-300" data-i18n="education_title"></h2>
-
-      <div class="flex items-start gap-3 pb-4">
-        <img src="universidade_da_corua_logo.jpeg" class="w-8 h-8 object-contain mt-1">
-        <div>
-          <p class="font-semibold" data-i18n="degree"></p>
-          <p class="text-gray-600" data-i18n="university"></p>
-          <p data-i18n="education_desc"></p>
-        </div>
+      <div class="space-y-6">
+        <p data-i18n="education_desc"></p>
       </div>
     </section>
 
@@ -143,33 +125,20 @@
       <h2 class="text-xl font-semibold mb-2 border-b pb-1 border-gray-300" data-i18n="contact_title"></h2>
       <ul>
         <li>📧 <a href="mailto:jgarciacatoira@gmail.com" class="text-blue-600 hover:underline">Email</a></li>
-        <li>💼 <a href="https://www.linkedin.com/in/juan-garc%C3%ADa-catoira-772817a2/" class="text-blue-600 hover:underline">LinkedIn</a></li>
+        <li>💼 <a href="https://www.linkedin.com/in/juan-garc%C3%ADa-catoira-772817a2/" class="text-blue-600 hover:underline">Linkedin</a></li>
       </ul>
     </section>
 
     <footer class="mt-12 text-center text-gray-500 text-sm">
-      <p>© <span id="year"></span> Juan García Catoira. <span data-i18n="rights"></span></p>
+      <p>© <span id="year"></span> Juan García Catoira.</p>
     </footer>
 
   </main>
 
-  <script src="js/i18n.js"></script>
-
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    function animateChange() {
-      const content = document.getElementById("main-content");
-      content.classList.add("opacity-0");
-      setTimeout(() => content.classList.remove("opacity-0"), 200);
-    }
-
-    const originalSetLanguage = window.setLanguage;
-    window.setLanguage = function (lang) {
-      animateChange();
-      originalSetLanguage(lang);
-    };
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
+  <script src="js/i18n.js"></script>
 </body>
 </html>
