@@ -1,0 +1,39 @@
+{
+  "subtitle": "Analista y desarrollador Backend",
+  "change_language_hint": "Cambiar idioma",
+  "about_title": "Sobre mí",
+  "about_text": "Soy desarrollador backend especializado en Java, con experiencia en banca, seguros y proyectos de gran escala. Me apasiona el código limpio, la mejora continua y el trabajo en equipo.",
+  "skills_title": "Habilidades técnicas",
+
+  "work_style_title": "Cómo trabajo con la gente",
+  "work_style_text": "Me gusta trabajar en equipo y creo que las mejores ideas surgen de la colaboración. He sido el punto de contacto con clientes y he participado en procesos de selección y formación de nuevos integrantes.",
+
+  "experience_title": "Lo que he hecho",
+
+  "odeene_role": "Analista – Odeene Ingeniería",
+  "odeene_desc": "Proyecto en el sector bancario y de seguros.",
+  "odeene_tasks": [
+    "Coordinación técnica del equipo",
+    "Diseño de arquitectura backend en Java",
+    "Implementación de APIs REST",
+    "Gestión de incidencias",
+    "Entrevistas técnicas"
+  ],
+
+  "vector_role": "Desarrollador Backend – Vector ITC Group",
+  "vector_desc": "Proyecto en el sector textil y logístico. Desarrollo y mantenimiento de servicios Java.",
+
+  "altia_role": "Desarrollador Backend – Altia S.A.",
+  "altia_desc": "Desarrollo de servicios web en Java con Apache Struts para la Administración Pública.",
+
+  "marketeer_role": "Desarrollador Backend – Marketeer",
+  "marketeer_desc": "Desarrollo de microservicios en Python para chatbots en Facebook y WhatsApp.",
+
+  "education_title": "Formación",
+  "degree": "Grado en Ingeniería Informática – Mención en Computación",
+  "university": "Universidade da Coruña",
+  "education_desc": "Especialización en programación, arquitectura de sistemas e inteligencia artificial.",
+
+  "contact_title": "Contáctame",
+  "rights": "Todos los derechos reservados."
+}
