@@ -21,7 +21,11 @@
   ],
 
   "vector_role": "Desarrollador Backend – Vector ITC Group",
-  "vector_desc": "Proyecto en el sector textil y logístico. Desarrollo y mantenimiento de servicios Java.",
+  "vector_desc": "Proyecto en el sector textil y logístico",
+  "vector_tasks": [
+    "Desarrollo y mantenimiento de servicios en Java.",
+    "Optimización de consultas SQL."
+  ]
 
   "altia_role": "Desarrollador Backend – Altia S.A.",
   "altia_desc": "Desarrollo de servicios web en Java con Apache Struts para la Administración Pública.",
